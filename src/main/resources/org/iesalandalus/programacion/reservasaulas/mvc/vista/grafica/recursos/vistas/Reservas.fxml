@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.mvc.vista.grafica.controladores.ControladorReservas">
    <children>
-      <Label layoutX="356.0" layoutY="14.0" text="RESERVAS" />
+      <Label layoutX="419.0" layoutY="14.0" text="RESERVAS" />
       <Button fx:id="btnInsertarReserva" layoutX="36.0" layoutY="73.0" mnemonicParsing="false" onAction="#insertar" text="Insertar ">
          <graphic>
             <ImageView fitHeight="14.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
@@ -21,23 +23,35 @@
                   <Image url="@../imagenes/insertar.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <Button fx:id="btnListarReservas" layoutX="36.0" layoutY="203.0" mnemonicParsing="false" onAction="#listarReservas" prefHeight="26.0" prefWidth="133.0" text="Listar las reservas" />
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="btnListarReservas" layoutX="33.0" layoutY="203.0" mnemonicParsing="false" onAction="#listarReservas" prefHeight="26.0" prefWidth="136.0" text="  Listar las reservas">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <TableView fx:id="tableListarReservas" layoutX="33.0" layoutY="345.0" prefHeight="230.0" prefWidth="742.0">
          <columns>
-            <TableColumn fx:id="columnProfesorReservas" prefWidth="228.79996871948242" text="PROFESOR" />
-            <TableColumn fx:id="columnAulaReservas" prefWidth="227.199951171875" text="AULA" />
-            <TableColumn fx:id="columnFechaReservas" prefWidth="286.4000244140625" text="FECHA-HORA" />
+            <TableColumn fx:id="columnProfesorReservas" prefWidth="228.79996871948242" style="-fx-background-color: #828282;" text="PROFESOR" />
+            <TableColumn fx:id="columnAulaReservas" prefWidth="227.199951171875" style="-fx-background-color: #828282;" text="AULA" />
+            <TableColumn fx:id="columnFechaReservas" prefWidth="286.4000244140625" style="-fx-background-color: #828282;" text="FECHA-HORA" />
          </columns>
+         <effect>
+            <DropShadow />
+         </effect>
       </TableView>
-      <Button fx:id="btnVolverReservas" layoutX="444.0" layoutY="598.0" mnemonicParsing="false" onAction="#volver" text="Volver">
+      <Button fx:id="btnVolverReservas" layoutX="412.0" layoutY="594.0" mnemonicParsing="false" onAction="#volver" text="Volver">
          <graphic>
             <ImageView fitHeight="28.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/salir.png" />
                </image>
             </ImageView>
-         </graphic></Button>
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
       <Button fx:id="btnBorrarReserva" layoutX="798.0" layoutY="447.0" mnemonicParsing="false" onAction="#borrar" text="Borrar">
          <graphic>
             <ImageView fitHeight="19.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
@@ -45,46 +59,85 @@
                   <Image url="@../imagenes/x.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <Button fx:id="btnListarReservaAula" layoutX="33.0" layoutY="242.0" mnemonicParsing="false" onAction="#listarAula" prefHeight="26.0" prefWidth="133.0" text=" Listar por aula" />
-      <Button fx:id="btnListarReservaProfesor" layoutX="33.0" layoutY="278.0" mnemonicParsing="false" onAction="#listarProfesor" text="Listar por profesor">
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="btnListarReservaAula" layoutX="35.0" layoutY="251.0" mnemonicParsing="false" onAction="#listarAula" prefHeight="26.0" prefWidth="136.0" text=" Listar por aula">
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="btnListarReservaProfesor" layoutX="35.0" layoutY="301.0" mnemonicParsing="false" onAction="#listarProfesor" text="Listar por profesor">
          <graphic>
-            <ImageView fitHeight="15.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/Listar.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <Label layoutX="226.0" layoutY="41.0" text="AULA" />
+         </graphic>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Label layoutX="226.0" layoutY="49.0" text="AULA" />
       <Label layoutX="188.0" layoutY="207.0" text="LISTAR TODAS LAS RESERVAS SIN FILTROS" />
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="36.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/Listar.png" />
-         </image>
-      </ImageView>
-      <DatePicker fx:id="dpFecha" layoutX="153.0" layoutY="148.0" />
-      <Label layoutX="454.0" layoutY="41.0" text="PROFERSOR" />
-      <Label layoutX="223.0" layoutY="119.0" text="FECHA" />
-      <Label layoutX="470.0" layoutY="119.0" text="HORA" />
-      <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="36.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+      <DatePicker fx:id="dpFecha" layoutX="153.0" layoutY="148.0">
+         <effect>
+            <DropShadow />
+         </effect></DatePicker>
+      <Label layoutX="448.0" layoutY="49.0" text="PROFERSOR" />
+      <Label layoutX="171.0" layoutY="126.0" text="FECHA (de cara a un mes )" />
+      <Label layoutX="463.0" layoutY="124.0" text="HORA" />
+      <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="40.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/Listar.png" />
          </image>
       </ImageView>
       <Button fx:id="btnDisponibilidad" layoutX="655.0" layoutY="67.0" mnemonicParsing="false" onAction="#disponibilidad" prefHeight="37.0" prefWidth="175.0" text="Consultar Disponibilidad">
          <graphic>
-            <ImageView fitHeight="14.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/insertar.png" />
+                  <Image url="@../imagenes/lupa.png" />
                </image>
             </ImageView>
          </graphic>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Button>
-      <Text layoutX="664.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta la disponibilidad del aula seleccionada en la fecha y el tramo seleccionado" wrappingWidth="156.493408203125" />
-      <ChoiceBox fx:id="dpAulaInsertar" layoutX="166.0" layoutY="73.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="dpTramo" layoutX="404.0" layoutY="148.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="dpProfesorInsertar" layoutX="405.0" layoutY="73.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="dpBuscarProfesor" layoutX="188.0" layoutY="278.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="dpBuscarAula" layoutX="188.0" layoutY="242.0" prefWidth="150.0" />
+      <Text layoutX="664.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta la disponibilidad del aula seleccionada en la fecha y el tramo seleccionado" wrappingWidth="156.493408203125" />
+      <ChoiceBox fx:id="dpAulaInsertar" layoutX="166.0" layoutY="73.0" prefWidth="150.0">
+         <effect>
+            <DropShadow />
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="dpTramo" layoutX="404.0" layoutY="148.0" prefWidth="150.0">
+         <effect>
+            <DropShadow />
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="dpProfesorInsertar" layoutX="405.0" layoutY="73.0" prefWidth="150.0">
+         <effect>
+            <DropShadow />
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="dpBuscarProfesor" layoutX="190.0" layoutY="301.0" prefWidth="150.0">
+         <effect>
+            <DropShadow />
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="dpBuscarAula" layoutX="190.0" layoutY="251.0" prefWidth="150.0">
+         <effect>
+            <DropShadow />
+         </effect></ChoiceBox>
+      <Text layoutX="788.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borra la reserva seleccionada en al tabla" wrappingWidth="84.00004882812505" />
+      <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="366.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/calendario.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="20.0" layoutX="43.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/Listar.png" />
+         </image>
+      </ImageView>
    </children>
+   <effect>
+      <DropShadow />
+   </effect>
 </AnchorPane>

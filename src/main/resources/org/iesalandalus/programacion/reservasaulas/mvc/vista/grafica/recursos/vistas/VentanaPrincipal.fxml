@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.reservasaulas.mvc.vista.grafica.controladores.ControladorVentanaPrincipal">
    <children>
-      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="600.0">
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: #828282;">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
@@ -32,9 +32,9 @@
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="429.0" spacing="100.0">
                <children>
-                  <Button fx:id="btnIrAulas" mnemonicParsing="false" onAction="#irPaginaAulas" text="AULAS" />
-                  <Button fx:id="btnIrProfesores" mnemonicParsing="false" onAction="#irPaginaProfesores" text="PROFESORES" />
-                  <Button fx:id="btnIrReservas" mnemonicParsing="false" onAction="#irPaginaReservas" text="RESERVAS" />
+                  <Button fx:id="btnIrAulas" mnemonicParsing="false" onAction="#irPaginaAulas" style="-fx-background-color: #000000;" text="AULAS" textFill="WHITE" />
+                  <Button fx:id="btnIrProfesores" mnemonicParsing="false" onAction="#irPaginaProfesores" style="-fx-background-color: #000000;" text="PROFESORES" textFill="WHITE" />
+                  <Button fx:id="btnIrReservas" mnemonicParsing="false" onAction="#irPaginaReservas" style="-fx-background-color: #000000;" text="RESERVAS" textFill="WHITE" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="146.0" prefWidth="542.0" spacing="25.0">
@@ -77,7 +77,7 @@
             <Font name="Arimo" size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="109.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="109.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/aula.png" />
          </image>
@@ -87,7 +87,7 @@
             <Image url="@../imagenes/profesor.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="26.0" fitWidth="38.0" layoutX="455.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="455.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imagenes/calendario.png" />
          </image>
